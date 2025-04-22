@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/layout.css" />
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/new-tweet.css">
 
 
     <!-- External JS -->
@@ -46,6 +47,21 @@
     </header>
 
     <main class="container">
+      <section class="new-tweet">
+        <h2 class="compose-tweet">Compose Tweet</h2>
+        <div class="tweet-entry">
+        <form action="/api/tweets" method="post">
+          <label for="tweet-text">What are you humming about?</label> <br>
+          <textarea name="text" id="tweet-text" placeholder="Start humming here..."></textarea>
+        </div>
+          <div class="submit-tweet">
+            <button class="button" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      
+
     <h2>Tweet 1:</h2>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis eius at, molestiae voluptates nobis nemo minima ipsum tempore pariatur repudiandae ea rerum quos obcaecati iure! Odio ullam harum ut!</p>
 
@@ -58,15 +74,16 @@
     <h2>Tweet 4:</h2>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis eius at, molestiae voluptates nobis nemo minima ipsum tempore pariatur repudiandae ea rerum quos obcaecati iure! Odio ullam harum ut!</p>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consectetur nisi soluta sint fugiat, qui sed quidem. Repellat, corporis aliquid aliquam hic et maxime laborum ducimus quo fuga explicabo ab?</p>
-    
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem explicabo minus quidem impedit est eaque dignissimos nam consequuntur omnis earum perferendis quae nihil ducimus animi quos, illum deleniti dolor saepe.</p>
-
+    <h2>Tweet 5:</h2>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis eius at, molestiae voluptates nobis nemo minima ipsum tempore pariatur repudiandae ea rerum quos obcaecati iure! Odio ullam harum ut!</p>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consectetur nisi soluta sint fugiat, qui sed quidem. Repellat, corporis aliquid aliquam hic et maxime laborum ducimus quo fuga explicabo ab?</p>
+    <h2>Tweet 6:</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis eius at, molestiae voluptates nobis nemo minima ipsum tempore pariatur repudiandae ea rerum quos obcaecati iure! Odio ullam harum ut!</p>
+
+    <h2>Tweet 7:</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis eius at, molestiae voluptates nobis nemo minima ipsum tempore pariatur repudiandae ea rerum quos obcaecati iure! Odio ullam harum ut!</p>
+
     
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem explicabo minus quidem impedit est eaque dignissimos nam consequuntur omnis earum perferendis quae nihil ducimus animi quos, illum deleniti dolor saepe.</p>
 
     </main>
 
