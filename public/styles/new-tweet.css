@@ -22,6 +22,7 @@
 textarea {
   width: 100%;
   height: 40px;
+  padding: ;
   font-family: 'Source Sans 3', sans-serif;
   font-size: large;
   resize: none;
@@ -48,6 +49,13 @@ label {
   cursor:pointer;
   padding: 10px 20px;
   margin: 15px 0px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: inherit ;
+  color: #4056A1;
+
 }
 .counter {
   margin: 15px 0px;
