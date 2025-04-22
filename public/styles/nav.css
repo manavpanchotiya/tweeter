@@ -1,0 +1,27 @@
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav span {
+  font-family: "Bungee", sans-serif;
+  
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.new-tweet {
+  font-family: "Source Sans 3", sans-serif;
+}
+
