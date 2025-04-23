@@ -5,6 +5,22 @@
   font-family: "Bungee", sans-serif;
 }
 
+.new-tweet-btn {
+  background-color: #4056A1 ;
+  color: white;
+  text-align: center;
+  border: none;
+  cursor:pointer;
+  /* padding: 10px 20px;
+  margin: 15px 0px; */
+  transition-duration: 0.4s;
+}
+
+.new-tweet-btn:hover {
+  background-color: inherit ;
+  color: #FF6B6B;
+}
+
 
 .submit-tweet {
   display: flex;
