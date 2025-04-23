@@ -55,9 +55,9 @@ label {
 
 .button:hover {
   background-color: inherit ;
-  color: #4056A1;
-
+  color: #FF6B6B;
 }
+
 .counter {
   margin: 15px 0px;
 }
