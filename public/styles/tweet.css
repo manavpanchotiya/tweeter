@@ -5,16 +5,16 @@
 
 article.tweet {
   border: 5px solid #FF6B6B;
-  padding: 10px 10px;
+  padding: 5px 10px;
   margin-top: 10px;
   margin-bottom: 60px;
-  transition-duration: 0.9ms;
 }
 
 article header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 15px;
 }
 
 .horizontal-line {
@@ -26,6 +26,8 @@ article footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 15px;
+  
 }
 
 .btn {
@@ -34,8 +36,8 @@ article footer {
   text-align: center;
   border: none;
   cursor:pointer;
-  padding: 5px 5px;
-  margin: 5px 0px;
+  padding: 5px;
+  margin: 5px ;
   transition-duration: 0.4s;
 }
 
