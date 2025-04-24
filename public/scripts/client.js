@@ -11,38 +11,38 @@ $(document).ready(function() {
     event.preventDefault();
     const txt = $(".text-area").val().trim();
     console.log(txt);
-      if (txt.length > 140) {
-        alert("Tweet is too long!");
-        return;
-      }
-      if (!txt) {
-        alert("Tweet can not be empty!");
-        return;
-      }     
+    if (txt.length > 140) {
+      alert("Tweet is too long!");
+      return;
+    }
+    if (!txt) {
+      alert("Tweet can not be empty!");
+      return;
+    }
       
-    })
+  });
     
-    const formData = $(event.target).serialize();
-    //console.log(event);
+  const formData = $(event.target).serialize();
+  //console.log(event);
 
-    $.ajax({
-      method: "POST",
-      url: "/api/tweets",
-      data: formData,
-      success: function(response) {
+  $.ajax({
+    method: "POST",
+    url: "/api/tweets",
+    data: formData,
+    success: function(response) {
       loadTweets();
       //console.log(response);
-      },
-      error: function(xhr,status,error) {
-        console.error(xhr.responseJSON || error);
-      }
+    },
+    error: function(xhr,status,error) {
+      console.error(xhr.responseJSON || error);
+    }
     
-    });
+  });
     
   
 
   const rendertweets = function(tweets) {
-    $("#tweets-container").empty()
+    $("#tweets-container").empty();
     for (const tweet of tweets) {
       const tweetElement = createTweetElement(tweet);
       $("#tweets-container").prepend(tweetElement);
