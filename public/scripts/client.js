@@ -18,6 +18,7 @@ $(document).ready(function() {
       url: "/api/tweets",
       data: formData,
       success: function(response) {
+      loadTweets();
       //console.log(response);
       },
       error: function(xhr,status,error) {
@@ -49,7 +50,7 @@ $(document).ready(function() {
           <hr class="horizontal-line">
 
           <footer>
-          <span>${timeago.formate(created_at)}</span>
+          <span>${timeago.format(created_at)}</span>
           <span>
             <button class="btn"><i class="fa-solid fa-flag"></i></button>
             <button class="btn"><i class="fa-solid fa-retweet"></i></button>
@@ -58,8 +59,11 @@ $(document).ready(function() {
           </footer>
         </article>
           `;
-    console.log(postTweet);
-    return $(postTweet);
+    
+    const $tweet = $(postTweet);
+    $tweet.find("p").text(content.text);
+    
+    return $tweet;
   };
 
   
@@ -67,7 +71,8 @@ $(document).ready(function() {
     $.ajax('api/tweets', {method: 'GET'})
       .then(function(tweets) {
         rendertweets(tweets);
-      });
+      })
+      .catch((err) => console.error(err));
   };
 
 });
