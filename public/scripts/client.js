@@ -20,30 +20,26 @@ $(document).ready(function() {
       alert("Tweet can not be empty!");
       return;
     }
-    
+
     const formData = $(event.target).serialize();
     //console.log(event);
   
     $.ajax({
       method: "POST",
       url: "/api/tweets",
-      data: formData,
-      success: function(response) {
+      data: formData
+    })
+      .done(function(response) {
         loadTweets();
-        //console.log(response);
-      },
-      error: function(xhr,status,error) {
-        console.error(xhr.responseJSON || error);
-      }
-      
-    });
+      })
+      .fail(function(xhr, status, error) {
+        console.error(error);
+      });
     
   });
-    
+        
   
-    
-  
-
+  //redner tweets
   const rendertweets = function(tweets) {
     $("#tweets-container").empty();
     for (const tweet of tweets) {
