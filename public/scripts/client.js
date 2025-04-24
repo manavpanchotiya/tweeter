@@ -9,6 +9,18 @@ $(document).ready(function() {
   
   $("form").on("submit", function(event) {
     event.preventDefault();
+    const txt = $(".text-area").val().trim();
+    console.log(txt);
+      if (txt.length > 140) {
+        alert("Tweet is too long!");
+        return;
+      }
+      if (!txt) {
+        alert("Tweet can not be empty!");
+        return;
+      }     
+      
+    })
     
     const formData = $(event.target).serialize();
     //console.log(event);
@@ -27,12 +39,13 @@ $(document).ready(function() {
     
     });
     
-  });
+  
 
   const rendertweets = function(tweets) {
+    $("#tweets-container").empty()
     for (const tweet of tweets) {
       const tweetElement = createTweetElement(tweet);
-      $("#tweets-container").append(tweetElement);
+      $("#tweets-container").prepend(tweetElement);
     }
   };
   const createTweetElement = (tweetData) => {
