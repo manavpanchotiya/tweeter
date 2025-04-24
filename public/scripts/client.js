@@ -81,10 +81,10 @@ $(document).ready(function() {
   
   const loadTweets = function() {
     $.ajax('api/tweets', {method: 'GET'})
-      .then(function(tweets) {
+      .done(function(tweets) {
         rendertweets(tweets);
       })
-      .catch((err) => console.error(err));
+      .fail((err) => console.error(err));
   };
 
 });
