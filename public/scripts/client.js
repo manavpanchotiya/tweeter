@@ -58,7 +58,7 @@ $(document).ready(function() {
           <span> ${handle} </span>
           </header>
 
-          <p>${content.text}</p>
+          <p></p>
           <hr class="horizontal-line">
 
           <footer>
