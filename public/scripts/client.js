@@ -7,6 +7,7 @@
  */
 $(document).ready(function() {
   
+  //form validation before submitting it
   $("form").on("submit", function(event) {
     event.preventDefault();
     const txt = $(".text-area").val().trim();
@@ -19,25 +20,27 @@ $(document).ready(function() {
       alert("Tweet can not be empty!");
       return;
     }
+    
+    const formData = $(event.target).serialize();
+    //console.log(event);
+  
+    $.ajax({
+      method: "POST",
+      url: "/api/tweets",
+      data: formData,
+      success: function(response) {
+        loadTweets();
+        //console.log(response);
+      },
+      error: function(xhr,status,error) {
+        console.error(xhr.responseJSON || error);
+      }
       
-  });
-    
-  const formData = $(event.target).serialize();
-  //console.log(event);
-
-  $.ajax({
-    method: "POST",
-    url: "/api/tweets",
-    data: formData,
-    success: function(response) {
-      loadTweets();
-      //console.log(response);
-    },
-    error: function(xhr,status,error) {
-      console.error(xhr.responseJSON || error);
-    }
+    });
     
   });
+    
+  
     
   
 
