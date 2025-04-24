@@ -11,13 +11,18 @@ $(document).ready(function() {
   $("form").on("submit", function(event) {
     event.preventDefault();
     const txt = $(".text-area").val().trim();
-    console.log(txt);
+    //console.log(txt);
+    
+    $(".error-message").slideUp().text("");
+
     if (txt.length > 140) {
-      alert("Tweet is too long!");
+      $(".error-message").text("Tweet is too long!").slideDown();
+      
       return;
     }
     if (!txt) {
-      alert("Tweet can not be empty!");
+      $(".error-message").text("Tweet can not be empty!").slideDown();
+      
       return;
     }
 
@@ -57,7 +62,7 @@ $(document).ready(function() {
           <span> <img src="${avatars}"> ${name} </span>
           <span> ${handle} </span>
           </header>
-
+          
           <p></p>
           <hr class="horizontal-line">
 
