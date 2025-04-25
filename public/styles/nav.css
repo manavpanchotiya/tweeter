@@ -1,4 +1,4 @@
-nav {
+  .top-bar {
   top: 0;
   position: fixed;
   height: 120px;
@@ -24,6 +24,15 @@ nav span {
   align-items: center;  
 }
 
+#tweeter-icon {
+  color: #FFFFFF;
+  text-decoration: none;
+}
 
+#tweeter-icon:hover {
+  text-decoration: none;
+  color: #FF6B6B;
+  transition-duration: 0.4s;
+}
 
 
