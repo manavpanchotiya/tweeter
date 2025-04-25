@@ -1,0 +1,39 @@
+/*Tablet Styles */
+@media only screen and (max-width: 768px) and (min-width: 1024px) {
+  header {
+    width: 33.3%;
+    line-height: 600px;
+  }
+  
+  .container {
+    width: 66.7%;
+    float: right
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header {
+    width: 25%;
+    height: auto;
+    justify-content: flex-start; /* Align the header to the top */
+    padding: 20px 44px;
+    height: fit-content;
+    margin: 50px 100px;
+  }
+
+  .container {
+    width: 75%;
+    margin: 0px 70px;
+    
+  }
+
+  form {
+    padding: 50px 0px;
+  }
+}
