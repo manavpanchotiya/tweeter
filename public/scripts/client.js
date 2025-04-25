@@ -6,7 +6,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-  
+    
   //form validation before submitting it
   $("form").on("submit", function(event) {
     event.preventDefault();
@@ -39,6 +39,7 @@ $(document).ready(function() {
       .fail(function(xhr, status, error) {
         console.error(error);
       });
+          
     $('#tweet-form').trigger("reset"); //clears form after successful tweet submission
   });
         
