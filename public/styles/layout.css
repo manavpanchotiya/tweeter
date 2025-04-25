@@ -25,12 +25,8 @@ body {
   
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 .container {
   background-color: inherit;
   width: 90%;
   margin: 0 auto;
 }
-

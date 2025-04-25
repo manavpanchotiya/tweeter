@@ -21,7 +21,7 @@
   .header {
     width: 25%;
     height: auto;
-    justify-content: flex-start; /* Align the header to the top */
+    justify-content: flex-start;
     padding: 20px 44px;
     height: fit-content;
     margin: 50px 100px;
