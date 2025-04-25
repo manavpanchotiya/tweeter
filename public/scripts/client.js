@@ -16,12 +16,12 @@ $(document).ready(function() {
     $(".error-message").slideUp().text("");
 
     if (txt.length > 140) {
-      $(".error-message").text("Tweet is too long!").slideDown();
+      $(".error-message").text("Tweet is too long mate!").slideDown();
       
       return;
     }
     if (!txt) {
-      $(".error-message").text("Tweet can not be empty!").slideDown();
+      $(".error-message").text("Uh oh! Tweet can not be empty!").slideDown();
       
       return;
     }
@@ -40,7 +40,7 @@ $(document).ready(function() {
       .fail(function(xhr, status, error) {
         console.error(error);
       });
-    
+    $('#tweet-form').trigger("reset"); //clear form after successful tweet submission
   });
         
   
