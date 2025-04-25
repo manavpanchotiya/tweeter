@@ -19,3 +19,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 - Body-parser
 - Timeago.js
+
+## Screenshots
+!["Screenshot of tweet compose box] (https://github.com/manavpanchotiya/tweeter/blob/master/docs/tweet-box.png)
+!["Screenshot of tweets] (https://github.com/manavpanchotiya/tweeter/blob/master/docs/tweets.png)
