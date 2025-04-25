@@ -11,7 +11,7 @@ $(document).ready(function() {
   $("form").on("submit", function(event) {
     event.preventDefault();
     const txt = $(".text-area").val().trim();
-    //console.log(txt);
+    
     
     $(".error-message").slideUp().text("");
 
@@ -27,8 +27,7 @@ $(document).ready(function() {
     }
 
     const formData = $(event.target).serialize();
-    //console.log(event);
-  
+      
     $.ajax({
       method: "POST",
       url: "/api/tweets",
@@ -40,11 +39,11 @@ $(document).ready(function() {
       .fail(function(xhr, status, error) {
         console.error(error);
       });
-    $('#tweet-form').trigger("reset"); //clear form after successful tweet submission
+    $('#tweet-form').trigger("reset"); //clears form after successful tweet submission
   });
         
   
-  //redner tweets
+  //render tweets
   const rendertweets = function(tweets) {
     $("#tweets-container").empty();
     for (const tweet of tweets) {
@@ -91,6 +90,4 @@ $(document).ready(function() {
       })
       .fail((err) => console.error(err));
   };
-
 });
-
