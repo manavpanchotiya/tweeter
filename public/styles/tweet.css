@@ -45,3 +45,19 @@ article footer {
   background-color: inherit ;
   color: #FF6B6B;
 }
+
+
+
+/* Desktop Styles
+@media only screen and (mid-width:1024px){
+  header {
+    width: 66.7;
+    
+    float: left;
+  }
+
+  .container {
+    width: 33.3;
+    
+  }
+} */
